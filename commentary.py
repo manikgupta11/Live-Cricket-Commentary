@@ -15,7 +15,7 @@ r1=r.get('matches')
 for match in r1:
 	print( match['match_id'],end=": ")
 	print( match['series_name'])
-print("Enter match id")
+print("\nEnter match id")
 mid = input()
 while True:
 	#res=requests.get('https://www.cricbuzz.com/live-cricket-scores/23446/')
@@ -58,8 +58,7 @@ while True:
 		currscore=inng['score']
 		currwkt=inng['wkts']
 
-		if( int(currscore) - int(prevscore) ==0 ):
-			print("here")
+		if( int(currscore) - int(prevscore) ==4 ):
 			os.system("xdg-open commentary_four.mp3")
 		elif( int(currscore) - int(prevscore) ==6 ):
 			os.system("xdg-open commentary_six.mp3")
